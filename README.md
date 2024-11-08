@@ -174,7 +174,7 @@ ggplot(conversionsHousing, aes(x=HousingLoan, y=ConversionRate, fill=HousingLoan
 
 
 ```
-![Housing Loan](assets/images/conversion_rate_by_housing_loann.jpg)
+![Housing Loan](assets/images/conversion_rate_by_housing_loan.jpg)
 
 ```r
 #group the data - personal loan
