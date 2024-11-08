@@ -108,7 +108,7 @@ conversionsJob$Job <- factor(conversionsJob$Job, levels = conversionsJob$Job[ord
 
 ggplot(conversionsJob, aes(x=Job, y=ConversionRate)) + geom_bar(width = 0.5,stat = "identity", fill= "darkgreen") + labs(title = "Conversion Rate By job Status") + theme(axis.text.x = element_text(angle = 90))
 ```
-![Row count check](assets/images/Conversion_rate_by_job_status.jpg)
+![Job Status](assets/images/Conversion_rate_by_job_status.jpg)
 
   Students and retired people have a higher conversion rate than other "job" groups. The blue-collar group has the lowest conversion rate.
 
@@ -131,7 +131,7 @@ ggplot(conversionsEdu, aes(x=Education, y=ConversionRate)) +
   labs(title="Conversion Rates by Education") +
   theme(axis.text.x = element_text(angle = 90))
 ```
-![Row count check](assets/images/conversion_rate_by_education.jpg)
+![Education](assets/images/conversion_rate_by_education.jpg)
 
 The highest conversion rate in the "illiterate" group. But because there are only 18 illiterate clients, I am not going to recommend focusing on this group. "University degree" has a higher than average conversion rate, so I would suggest focusing on this group. Also, I would recommend limit marketing efforts on groups "basic.6y" and "basic.9y"
 
@@ -150,7 +150,7 @@ ggplot(conversionsDefaultCredit, aes(x=HasCredit, y=ConversionRate, fill=HasCred
   geom_bar(width=0.5, stat = "identity") +
   labs(title="Conversion Rates by Default Credit")
 ```
-![Row count check](assets/images/conversion_rate_by_default_credit.jpg)
+![Default Credit](assets/images/conversion_rate_by_default_credit.jpg)
 
   So if a client doesn't have a credit, the one is more likely to subscribe to a term deposit.
 
@@ -174,7 +174,7 @@ ggplot(conversionsHousing, aes(x=HousingLoan, y=ConversionRate, fill=HousingLoan
 
 
 ```
-![Row count check](assets/images/conversion_rate_by_housing_loann.jpg)
+![Housing Loan](assets/images/conversion_rate_by_housing_loann.jpg)
 
 ```r
 #group the data - personal loan
@@ -191,7 +191,7 @@ ggplot(conversionsLoan, aes(x=Loan, y=ConversionRate, fill=Loan)) +
 
 ```
 
-![Row count check](assets/images/conversion_rate_by_personal_loan.jpg)
+![Personal Loan](assets/images/conversion_rate_by_personal_loan.jpg)
 
 
 
@@ -208,11 +208,11 @@ conversionsContact <- data %>%
 
 head(conversionsContact)
 ```
-![Row count check](assets/images/conversion_by_contact_type.jpg)
+![Conversion By Contact Type](assets/images/conversion_by_contact_type.jpg)
 Cellular type of contacting clients is more efficient
 
 
-# Conversions by the last contact month of a yea
+# Conversions by the last contact month of a year
 
 
 ```r
@@ -232,7 +232,7 @@ ggplot(conversionsMonth, aes(x=Month, y=ConversionRate)) +
   labs(title="Conversion Rates by Last Contact Month") +
   theme(axis.text.x = element_text(angle = 90))
 ```
-![Row count check](assets/images/conversion_by_last_contact_month.jpg)
+![Last Mont Of Year](assets/images/conversion_by_last_contact_month.jpg)
 People who were contacted last time in March, December, September, and October convert much better than others.
 
 # Conversions by the last contact day of a week
@@ -254,7 +254,7 @@ ggplot(conversionsDayOfWeek, aes(x=Day_Of_Week, y=ConversionRate)) +
   labs(title="Conversion Rates by Last Contact Day of Week") +
   theme(axis.text.x = element_text(angle = 90))
 ```
-![Row count check](assets/images/conversion_by_last_day_of_week.jpg)
+![Last Day Of Week](assets/images/conversion_by_last_day_of_week.jpg)
 # Correlation between subscribing to a term deposit and call duration
 
 ## 
@@ -265,7 +265,7 @@ data_duration <- data %>%
 head(data_duration)
 ```
 
-![Row count check](assets/images/Time_duration.jpg)
+![Time Duration](assets/images/Time_duration.jpg)
 
 The average duration of a successful call is more than 2 times longer.
 
@@ -280,7 +280,7 @@ conversionsCamp <- data %>%
 
 head(conversionsCamp)
 ```
-![Row count check](assets/images/number_contacts.jpg)
+![Number Of Contacts](assets/images/number_contacts.jpg)
 
 
  If you look at the full data (not just a head), you will notice that after 18 (the number of contacts performed during this campaign and for this client) conversion rate is 0. So there is no point to call clients more than 18 times during one campaign).
@@ -301,7 +301,7 @@ ggplot(conversionsPOutcome, aes(x=Previous_Outcome, y=ConversionRate)) +
   labs(title="Conversion Rates by Outcome of the Previous Campaign")
 ```
 
-![Row count check](assets/images/previus_campain.jpg)
+![Previus Campaign](assets/images/previus_campain.jpg)
 
 Obviously, if the previous campaign outcome was successful (the bank probably earned some loyalty), this campaign converted better as well.
 
